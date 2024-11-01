@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css/style.css" />
+    <title>Frontend Mentor | Multi-step form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="steps_container">
+        <div class="only_step">
+          <h1 class="Active">1</h1>
+          <div class="text_content">
+            <p>Step 1</p>
+            <h3>Your info</h3>
+          </div>
+        </div>
+        <div class="only_step">
+          <h1>2</h1>
+          <div class="text_content">
+            <p>Step 2</p>
+            <h3>Select plan</h3>
+          </div>
+        </div>
+        <div class="only_step">
+          <h1>3</h1>
+          <div class="text_content">
+            <p>Step 3</p>
+            <h3>Add-ons</h3>
+          </div>
+        </div>
+        <div class="only_step">
+          <h1>4</h1>
+          <div class="text_content">
+            <p>Step 4</p>
+            <h3>Summary</h3>
+          </div>
+        </div>
+      </div>
+      <div class="formule_container-1">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+        <div class="name_container">
+          <div class="header_name">
+            <h2>Name</h2>
+            <h4 class="errors_name"></h4>
+          </div>
+          <input type="text" id="name_input" placeholder="e.g. Stephen King" />
+        </div>
+        <div class="name_container">
+          <div class="header_name">
+            <h2>Email Address</h2>
+            <h4 class="errors_email"></h4>
+          </div>
+          <input
+            type="email"
+            id="email_input"
+            placeholder="e.g. stephenking@lorem.com"
+          />
+        </div>
+        <div class="name_container">
+          <div class="header_name">
+            <h2>Phone Number</h2>
+            <h4 class="errors_phone"></h4>
+          </div>
+          <input
+            type="tel"
+            id="phone_input"
+            placeholder="e.g. +1 234 567 890"
+          />
+        </div>
+        <div class="btn_content">
+          <button class="next_btn">Next Step</button>
+        </div>
+      </div>
+      <div class="formule_container-2" style="display: none">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+        <div class="select_container">
+          <div class="only_container">
+            <img src="assets/images/icon-arcade.svg" alt="" />
+            <h2>Arcade</h2>
+            <p id="price_1" class="price" value="9">$9/mo</p>
+          </div>
+          <div class="only_container">
+            <img src="assets/images/icon-advanced.svg" alt="" />
+            <h2>Advanced</h2>
+            <p id="price_2" class="price" value="12">$12/mo</p>
+          </div>
+          <div class="only_container">
+            <img src="assets/images/icon-pro.svg" alt="" />
+            <h2>Pro</h2>
+            <p id="price_3" class="price" value="15">$15/mo</p>
+          </div>
+        </div>
+        <div class="select_choice_container">
+          <span>Monthly</span>
+          <label class="switch">
+            <input type="checkbox" class="check_btn" />
+            <span class="slider"></span>
+          </label>
+          <span>Yearly</span>
+        </div>
+        <div class="btn_container">
+          <button class="go_back_btn">Go Back</button>
+          <span class="errors_selecter"></span>
+          <button class="next_step_2">Next Step</button>
+        </div>
+      </div>
+      <div class="formule_container-3">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+        <div class="only_service">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="check_input" />
+            <span class="checkbox-label"></span>
+          </label>
+
+          <div class="text_service">
+            <h2>Online service</h2>
+            <p>Access to multiplayer games</p>
+          </div>
+          <span class="price_month_1 price_service" value="1">$1/mo</span>
+        </div>
+        <div class="only_service">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="check_input" />
+            <span class="checkbox-label"></span>
+          </label>
+          <div class="text_service">
+            <h2>Larger storage</h2>
+            <p>Extra 1TB of cloud save</p>
+          </div>
+          <span class="price_month_2 price_service" value="2">+$2/mo</span>
+        </div>
+        <div class="only_service">
+          <label class="custom-checkbox">
+            <input type="checkbox" class="check_input" />
+            <span class="checkbox-label"></span>
+          </label>
+          <div class="text_service">
+            <h2>Customizable Profile</h2>
+            <p>Custom theme on your profile</p>
+          </div>
+          <span class="price_month_3 price_service" value="2"> +$2/mo</span>
+        </div>
+        <div class="btn_service">
+          <a href="#" class="go_back_btn_2">Go Back</a>
+          <span class="errors-service"></span>
+          <button class="next_btn_3">Next Step</button>
+        </div>
+      </div>
+      <div class="formule_container-4">
+        <h1>Finishing up</h1>
+        <p>Double-check everything looks OK before confirming.</p>
+        <div class="result_container">
+          <div class="only_result plan_result">
+            <div class="text_result">
+              <h2>acrade(Monthly)</h2>
+              <h5>change</h5>
+            </div>
+            <div class="rsult_number">$9/M</div>
+          </div>
+          <div class="only_result pick_result">
+            <h5>acrade</h5>
+            <div class="rsult_number">$9/M</div>
+          </div>
+          <div class="only_result">
+            <h5>acrade</h5>
+            <div class="rsult_number">$9/M</div>
+          </div>
+        </div>
+        <div class="total_result">
+          <h2>Total (per month/year):</h2>
+          <h1 class="result_totale_price">12$</h1>
+        </div>
+        <div class="btn_result">
+          <a href="#" class="back_of_result_btn">Go Back</a>
+          <button class="confirme_finel_btn">Confirm</button>
+        </div>
+      </div>
+      <div class="formule_container-5">
+        <img src="assets/images/icon-thank-you.svg" alt="thank you" />
+        <h1>Thank you!</h1>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun using our
+          platform. If you ever need support, please feel free to email us at
+          <span class="email_user">support@loremgaming.com</span>
+        </p>
+      </div>
+    </div>
+ 
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">hicham drakech</a>.
+    </div>
+    <script src="style.css/app.js"></script>
+  </body>
+</html>
